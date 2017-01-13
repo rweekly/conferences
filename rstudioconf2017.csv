@@ -2,3 +2,4 @@ Title,Speaker,Topics,Links
 Intermediate Shiny Workshop, Joe Cheng, shiny, https://github.com/jcheng5/rstudio2017-shiny-workshop
 Happy R users purrr: using functional programming to solve iteration problems,Charlotte Wickham,purrr,http://bit.ly/purrr-rstudioconf
 Building Dashboards with Shiny,Winston Chang & Joe Cheng,shiny,https://github.com/jcheng5/dashtutorial
+R and Sparklyr, Javier Luraschi, spark, bit.ly/2ilaQmi

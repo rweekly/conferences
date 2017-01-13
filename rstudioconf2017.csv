@@ -3,3 +3,4 @@ Intermediate Shiny Workshop, Joe Cheng, shiny, https://github.com/jcheng5/rstudi
 Happy R users purrr: using functional programming to solve iteration problems,Charlotte Wickham,purrr,http://bit.ly/purrr-rstudioconf
 Building Dashboards with Shiny,Winston Chang & Joe Cheng,shiny,https://github.com/jcheng5/dashtutorial
 R and Sparklyr, Javier Luraschi, spark, bit.ly/2ilaQmi
+Using Web APIs from R, Amanda Gadrow, api, https://github.com/ajmcoqui/webAPIsR

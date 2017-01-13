@@ -5,4 +5,5 @@ Building Dashboards with Shiny,Winston Chang & Joe Cheng,shiny,https://github.co
 R and Sparklyr, Javier Luraschi, spark, https://beta.rstudioconnect.com/content/2371/r-and-spark.html#1
 Using Web APIs from R, Amanda Gadrow, api, https://github.com/ajmcoqui/webAPIsR
 Putting square pegs in round holes: using list-cols in your dataframe, Jenny Bryan, list-columns dataframe, https://speakerdeck.com/jennybc/putting-square-pegs-in-round-holes-using-list-cols-in-your-dataframe
-
+Writing readable code with pipes, Bob Rudis, coding style, https://github.com/hrbrmstr/rstudioconf2017
+Teaching Introductory Statistics Using the tidyverse via bookdown, Chester Ismay, education, http://ismayc.github.io/rsconf/slides.html

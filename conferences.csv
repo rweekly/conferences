@@ -1,2 +1,2 @@
-file_name, conference_name, time
-rstudioconf2017.csv, rstudio::conf 2017, 01-13-2017
+file_name, conference_name, year, time
+rstudioconf2017.csv, rstudio::conf, 2017, 01-13-2017

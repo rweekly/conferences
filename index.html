@@ -1,0 +1,22 @@
+---
+layout: default
+title: Home
+---
+<h3>Incoming Conferences</h3>
+<p>TBA</p>
+
+<h3>Past Conferences</h3>
+<ul>
+  {% for confs in site.conferences %}
+    {% if confs.name != "template" %}
+    <li> 
+      <a href="{{ confs.url }}">{{ confs.name }} {{ confs.year }} </a>
+      <span style="float: right">{{ confs.date | date_to_long_string }}</span>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<h3>Recent Meetups</h3>
+<p>TBA</p>
+<br>

@@ -1,0 +1,131 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="/manifest.json">
+  <!-- <link rel="stylesheet" href="{{ site.baseurl }}/styles.css"> -->
+  <style type="text/css">
+    {% capture include_to_scssify %}
+    
+    {% include styles.scss %}
+    
+    {% endcapture %}
+    
+    {{ include_to_scssify | scssify }}
+  </style>
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/images/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/icons/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="{{ site.baseurl }}/images/icons/safari-pinned-tab.svg" color="#191d1f">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/images/icons/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/atom.xml"> 
+  
+
+  <meta property="og:image" content="https://rweekly.org/public/facebook.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="RWeekly.org - {{ page.title }}" /> {% if page.title == "Home" %}
+  <meta name="twitter:description" content="Weekly News in R Community" /> {% else %}
+  <meta name="twitter:description" content="{{ page.description }}" /> {% endif %}
+  <meta name="twitter:image" content="https://rweekly.org/public/logo.png" />
+  <script>
+    // external
+    var shortregex = /^((www)|(blog))\./
+    function add_external_links() {
+      var links = document.querySelectorAll(".post a");
+      for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+        if (links[i].hostname != window.location.hostname && !links[i].classList.contains("externalLink")) {
+          var targetlink = links[i];
+          targetlink.target = '_blank';
+          targetlink.classList.add('externalLink');
+          var newNode = document.createElement('text');
+          newNode.className += "tooltiptext";
+          shorturl = targetlink.hostname.replace(shortregex,"")
+          newNode.innerHTML = '&nbsp;(&nbsp;' + shorturl +'&nbsp;)&nbsp;'; 
+          var parentelt = targetlink.parentElement;
+          if (!parentelt.classList.contains("added-hostname")){
+              parentelt.classList.add("added-hostname");
+              links[i].parentElement.appendChild(newNode);
+          }
+
+          var newspan = document.createElement('span');
+          newspan.className += "spantext";
+          newspan.innerHTML = targetlink.hostname;
+          targetlink.appendChild(newspan);
+        }
+      }
+    }
+    setInterval(add_external_links, 1000);
+  </script>
+  <script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(['setCustomVariable', 1, "Night", localStorage.getItem('night'), "page"]);
+    _paq.push(['setCustomVariable', 2, "Origin", localStorage.getItem('origin'), "page"]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking', true]);
+    _paq.push(['enableHeartBeatTimer']);
+    _paq.push(['trackAllContentImpressions']);
+    (function () {
+      var u = "//web.rweekly.org/";
+      _paq.push(['setTrackerUrl', u + 'js/index.php']);
+      _paq.push(['setSiteId', '1']);
+      var d = document,
+        g = d.createElement('script'),
+        s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript';
+      g.async = true;
+      g.defer = true;
+      g.src = u + 'js/index.php';
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+  <noscript>
+    <p><img src="//web.rweekly.org/js/index.php?idsite=1" style="border:0;" alt="" /></p>
+  </noscript>
+  <!--DNS Prefetch-->
+  <link rel="dns-prefetch" href="//www.rstudio.com">
+  <link rel="dns-prefetch" href="//github.com">
+  <link rel="dns-prefetch" href="http://blog.revolutionanalytics.com">
+  <link rel="dns-prefetch" href="//blog.rstudio.org">
+  <script>
+    function nightMode() {
+      if (localStorage.getItem('night') === 'true') {
+        localStorage.setItem('night', 'false');
+        document.body.classList.remove('night');
+        _paq.push(['trackEvent', 'set-nightmode', 'false']);
+      } else {
+        localStorage.setItem('night', 'true');
+        document.body.classList.add('night');
+        _paq.push(['trackEvent', 'set-nightmode', 'true']);
+      }
+    }
+    if (localStorage.getItem('night') === 'true') {
+      document.addEventListener("DOMContentLoaded", function () {
+        document.body.classList.add('night');
+      });
+    }
+    function originMode() {
+      if (localStorage.getItem('origin') === 'true') {
+        localStorage.setItem('origin', 'false');
+        document.body.classList.remove('show-origin');
+        document.body.classList.add('hide-origin');
+        _paq.push(['trackEvent', 'set-origin', 'false']);
+      } else if (localStorage.getItem('origin') === 'false') {
+        localStorage.setItem('origin', 'true');
+        document.body.classList.add('show-origin');
+        document.body.classList.remove('hide-origin');
+        _paq.push(['trackEvent', 'set-origin', 'true']);
+      } else {
+        localStorage.setItem('origin', 'false');
+        document.body.classList.add('hide-origin');
+        document.body.classList.remove('show-origin');
+        _paq.push(['trackEvent', 'set-origin', 'false']);
+      }
+    }
+    if (localStorage.getItem('origin') == 'false') {
+      document.addEventListener("DOMContentLoaded", function () {
+        document.body.classList.remove('show-origin');
+        document.body.classList.add('hide-origin');
+      });
+    }
+  </script>
+</head>

@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<h2>{{ page.name }} {{ page.year }}</h2>
+<p><small>{{ page.date | date_to_long_string }}</small></p>
+<p><small>{{ page.location }}</small></p>
+
+<h3>Talks</h3>
+<ul>
+  {% for talks in page.talks %}
+  <li><a href="{{ talks.url }}"> {{ talks.title }}</a>, {{ talks.speaker }}</li>
+  {% endfor %}
+</ul>
+
+<h3>Highlighted Packages</h3>
+<ul>
+  {% for pkgs in page.packages %}
+  <li><a href="{{ pkgs.url }}"> {{ pkgs.title }}</a>, {{ pkgs.speaker }}</li>
+  {% endfor %}
+</ul>

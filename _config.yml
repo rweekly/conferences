@@ -1,0 +1,31 @@
+# Permalinks
+permalink:           /:title.html
+
+# Setup
+title:               Conferences by RWeekly
+url:                 https://conf.rweekly.org
+paginate:            1
+baseurl:             ""
+nav-baseurl:         "https://conf.rweekly.org"
+ampdir: amp
+description: Collect slides and other presentation materials from various R conferences/meetups.
+post_max: 396+24
+
+collections:
+  conferences:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "conferences"
+    values:
+      layout: "conf"
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+

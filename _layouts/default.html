@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+  
+  <body class="show-origin">
+  
+  {% include github-corner.html %}
+
+    <div class="container content">
+      <header class="masthead">
+        <h3 class="masthead-title">
+          <a href="{{ site.baseurl }}/" title="Home" style="padding: 0 9px 0 0;">
+            RWeekly.org <span style="color: #999; font-size: 75%">- Conferences & meetups</span></a>
+          <small style="float: right;"><a href="https://rweekly.org/">Back to RWeekly.org &#x25B9;</a></small>
+        </h3>
+        <h4 
+      <!--&nbsp;&nbsp;&nbsp;-->
+      </header>
+
+      <main>
+        {{ content }}
+      </main>
+
+      <footer class="footer">
+        {% capture footer-md %}{% include footer.md %}{% endcapture %}
+        {{ footer-md | markdownify }}
+        <small>
+          &copy; 2016-2017 RWeekly.org &nbsp;
+        </small>
+      </footer>
+    </div>
+
+
+    <script>
+    
+    page_view = document.getElementById("page_view");
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET","https://page.rweekly.org/?page="+document.location.host + document.location.pathname);
+    if (page_view){
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var myArr = JSON.parse(xhr.responseText);
+            page_view.innerHTML = myArr.hit + " views" ;
+        }
+      };
+    }
+    xhr.send();
+
+    </script>
+
+    <script>
+    var anchorForId = function (id) {
+	var anchor = document.createElement("a");
+	  anchor.className = "header-link";
+	  anchor.href      = "#" + id;
+	  anchor.innerHTML = "<i class=\"fa fa-link\"></i>";
+	  return anchor;
+	};
+
+	var linkifyAnchors = function (level, containingElement) {
+	  var headers = containingElement.getElementsByTagName("h" + level);
+	  for (var h = 0; h < headers.length; h++) {
+	    var header = headers[h];
+
+	    if (typeof header.id !== "undefined" && header.id !== "") {
+	      header.appendChild(anchorForId(header.id));
+	    }
+	  }
+	};
+
+	document.onreadystatechange = function () {
+	  if (this.readyState === "complete") {
+	    var contentBlock = document.getElementsByClassName("post")[0]
+	    if (!contentBlock) {
+	      return;
+	    }
+	    for (var level = 1; level <= 3; level++) {
+	      linkifyAnchors(level, contentBlock);
+	    }
+	  }
+	};
+  
+  add_external_links();
+console.log(`%c               ..     .                 
+            .?????.+++++                
+        ?8.  .???   +++.  ~+.           
+       . .. ..... ... .. +.. .          
+      ?... .+.. . 88  ...?......        
+      .?. .+++=.      ..???. .++        
+       .   +~+,         ..?.  +,        
+         ...  ,              8. .       
+        ??II..,          .:88888        
+        .III  ,            .888.        
+        ?..I  ,         +  .....        
+        +. ...$     ... ...++ .         
+        +++..8$.,  ????. .++++.         
+       .++.  8O8O  .?,?.  ++=.          
+         .. .+.           I             
+        +...+++...:==~...I.             
+       .+. .+++. ,.===. .II.            
+       .+  .+.~    ..= ..I.7            
+          =+  ,        +,    .7.        
+       ..????.,       .+++..7777        
+         ???? ,        ..+  .777        
+        ..... ,          .  .. .        
+        +.. ..             :+....=      
+        .,...               .+...       
+
+Join us! https://rweekly.org/about.html `, "font-family:monospace")
+    </script>
+  </body>
+</html>

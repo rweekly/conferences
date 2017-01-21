@@ -3,10 +3,10 @@ permalink:           /:title.html
 
 # Setup
 title:               Conferences by RWeekly
-url:                 http://rweekly.github.io/conferences/
+url:                 http://rweekly.github.io/conferences
 paginate:            1
 baseurl:             ""
-nav-baseurl:         "http://rweekly.github.io/conferences/"
+nav-baseurl:         "http://rweekly.github.io/conferences"
 ampdir: amp
 description: Collect slides and other presentation materials from various R conferences/meetups.
 post_max: 396+24

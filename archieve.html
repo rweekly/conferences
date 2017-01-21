@@ -1,14 +1,11 @@
 ---
 layout: default
-title: Home
+title: Conference Archieve
 ---
-<h3>Incoming Conferences</h3>
-<p>TBA</p>
-
-<h3><a href="archieve">Past Conferences</a></h3>
+<h3>Conference Archieve</h3>
 <ul>
   {% assign sorted_confs = (site.conferences | sort: 'date') | reverse %}
-  {% for confs in sorted_confs limit:5 %}
+  {% for confs in sorted_confs %}
     {% if confs.name != "template"%}
     <li> 
       <a href="{{ confs.url }}">{{ confs.name }} {{ confs.year }} </a>
@@ -17,7 +14,3 @@ title: Home
     {% endif %}
   {% endfor %}
 </ul>
-
-<h3>Recent Meetups</h3>
-<p>TBA</p>
-<br>

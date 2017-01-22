@@ -1,3 +1,6 @@
+<hr />
+
+<p></p>
 
 <form id="search-form" target="_blank" action="/search.html" method="get">
 <label for="search-box"></label>
@@ -25,8 +28,8 @@ document.getElementById('search-form').addEventListener('submit', function(e){
 
 Subscribe R Weekly with <a href="https://feedburner.google.com/fb/a/mailverify?uri=rweekly&amp;loc=en_US" target="_blank" onclick="_paq.push(['trackEvent', 'Mail', '1']);">Email</a>.
 
-**R Weekly** is openly developed [on GitHub](https://github.com/rweekly/rweekly.org).
+**R Weekly** is openly developed [on GitHub](https://github.com/rweekly/rweekly.org). 
 
 [Twitter @ rweekly_org](https://twitter.com/rweekly_org)
 
-R Weekly uses [cookies](/privacy) to improve user experience.
+We use [cookies](https://rweekly.org/privacy.html) to improve user experience.

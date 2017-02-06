@@ -9,13 +9,21 @@ layout: default
 <h3>Talks</h3>
 <ul>
   {% for talks in page.talks %}
-  <li><a href="{{ talks.url }}"> {{ talks.title }}</a>, {{ talks.speaker }}</li>
+  <li style="padding-bottom: 10px"><a href="{{ talks.url }}" target="_blank"> {{ talks.title }}</a>, {{ talks.speaker }}
+   {% if talks.topics != null %}
+   <text style="color: #999;">&nbsp;(&nbsp;{{ talks.topics }}&nbsp;)&nbsp;</text>
+   {% endif %}
+   </li>
   {% endfor %}
 </ul>
 
-<h3>Highlighted Packages</h3>
+<h3>Packages and Resources</h3>
 <ul>
   {% for pkgs in page.packages %}
-  <li><a href="{{ pkgs.url }}"> {{ pkgs.title }}</a>, {{ pkgs.speaker }}</li>
+  <li style="padding-bottom: 10px"><a href="{{ pkgs.url }}" target="_blank"> {{ pkgs.title }}</a>, {{ pkgs.speaker }} 
+  {% if pkgs.topics != null %}
+  <text style="color: #999;">&nbsp;(&nbsp;{{ pkgs.topics }}&nbsp;)&nbsp;</text>
+  {% endif %}
+  </li>
   {% endfor %}
 </ul>

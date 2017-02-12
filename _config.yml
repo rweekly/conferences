@@ -2,7 +2,7 @@
 permalink:           /:title.html
 
 # Setup
-title:               Conferences by R Weekly
+title:               R conferences & meetups by R Weekly
 url:                 https://conf.rweekly.org
 paginate:            1
 baseurl:             ""
@@ -29,4 +29,10 @@ sass:
   sass_dir:          _sass
   style:            :compressed
 
-gems: [jekyll-paginate]
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-sitemap
+  - jemoji
+  - jekyll-seo-tag

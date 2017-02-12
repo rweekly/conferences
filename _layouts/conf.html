@@ -6,6 +6,36 @@ layout: default
 <p><small>{{ page.date | date_to_long_string }}</small></p>
 <p><small>{{ page.location }}</small></p>
 
+<form id="sid-search">
+  <input id="sid" name="query" placeholder="keywords" class="input-box">
+</form>
+<script>
+var sid = document.getElementById("sid-search");
+sid.addEventListener('submit', function(e){
+  e.preventDefault();
+});
+
+sid.addEventListener('keydown', function(e){
+  var main_doc = document.getElementById('main-content');
+  var regexp = new RegExp(document.getElementById("sid").value, 'i');
+  var li_list = document.querySelectorAll('#main-content li');
+  for(var i = 0; i < li_list.length; i++){
+    var temp_li = li_list[i];
+    var temp_text = temp_li.innerText;
+    if (regexp.test(temp_text)){
+      temp_li.classList.remove("li-hide");
+    }else{
+      temp_li.classList.add("li-hide");
+    }
+  }
+})
+
+document.getElementById("sid").addEventListener('change', function(e){
+  _paq.push(['trackEvent', 'filter-total-li', document.getElementById("sid").value]);
+});
+
+</script>
+<div id="main-content" class="li-content">
 <h3>Talks</h3>
 <ul>
   {% for talks in page.talks %}
@@ -27,3 +57,4 @@ layout: default
   </li>
   {% endfor %}
 </ul>
+</div> 

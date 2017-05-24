@@ -37,9 +37,9 @@ layout: default
 <h3>Talks {% if page.edit_link != null %}<a target="_blank" class="externalLink" href="{{ page.edit_link }}"> 📝 </a>{% endif %}</h3>
   {% for talks in page.talks %}
 <ul>
-  <li style="padding-bottom: 10px"><a href="{{ talks.url }}" target="_blank"> {{ talks.title }}</a>    {% if talks.video_link != null %}<a href=" {{ talks.video_link }} ">&nbsp;&nbsp;📹 </a>{% endif %} <br/> {{ talks.speaker }}
+  <li style="padding-bottom: 10px"><span><a href="{{ talks.url }}" target="_blank"> {{ talks.title }}</a>{% if talks.video_link != null %}<nobr><a target="_blank" class="externalLink" href=" {{ talks.video_link }} ">&nbsp;📹&nbsp;</a></nobr>{% endif %}</span><br/>{{ talks.speaker }}
    {% if talks.topics != null %}
-   <text style="color: #999;">&nbsp; {{ talks.topics }}&nbsp; </text>
+   <text style="color: #878787;">&nbsp; {{ talks.topics }}&nbsp; </text>
    {% endif %}
    </li>
   {% if talks.image != null %}

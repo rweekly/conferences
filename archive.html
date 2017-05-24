@@ -4,13 +4,10 @@ title: Conference Archieve
 ---
 <h3>Conference Archive</h3>
 <ul>
-  {% assign sorted_confs = (site.conferences | sort: 'date') | reverse %}
-  {% for confs in sorted_confs %}
-    {% if confs.name != "template"%}
+  {% for post in paginator.posts %}
     <li> 
-      <a href="{{ confs.url }}">{{ confs.name }} {{ confs.year }} </a>
-      <span style="float: right">{{ confs.date | date_to_long_string }}</span>
+      <a href="{{ post.url }}">{{ post.name }} {{ confs.year }} </a>
+      <span style="float: right">{{ post.date | date_to_long_string }}</span>
     </li>
-    {% endif %}
   {% endfor %}
 </ul>

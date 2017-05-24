@@ -108,6 +108,18 @@ console.log(`%c               ..     .
         .,...               .+...       
 
 Join us! https://rweekly.org/about.html `, "font-family:monospace")
+
+{% include twemoji.min.js %}
+
+document.addEventListener("DOMContentLoaded", function(){
+  twemoji.parse(document.body,
+  {
+    folder: 'svg',
+    ext: '.svg'
+  });
+});
+
     </script>
   </body>
+  {% include filter.html %}
 </html>

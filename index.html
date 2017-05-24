@@ -2,27 +2,30 @@
 layout: default
 title: Home
 ---
-<h3>Incoming Conferences</h3>
+
+<h3>Upcoming</h3>
 <ul>
   <li>useR! 2017 <span style="float: right">July 4, 2017</span></li>
   <li>R in insurance 2017 <span style="float: right">June 8, 2017</span></li>
 </ul>
 
-<h3><a href="archive">Conferences</a></h3>
+
+
+
+
+
+
+
+
+<h3>Conferences & Meetups</h3>
 <ul>
-  {% assign sorted_confs = (site.conferences | sort: 'date') | reverse %}
-  {% for confs in sorted_confs limit:5 %}
-    {% if confs.name != "template"%}
+  {% for post in site.posts %}
     <li> 
-      <a href="{{ confs.url }}">{{ confs.name }} {{ confs.year }} </a>
-      <span style="float: right">{{ confs.date | date_to_long_string }}</span>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }} {{ post.year }} </a>
+      <span style="float: right">{{ post.date | date_to_long_string }}</span>
     </li>
-    {% endif %}
   {% endfor %}
 </ul>
-
-<h3>Meetups</h3>
-<ul>
 
 </ul>
 <br>

@@ -11,15 +11,8 @@ ampdir: amp
 description: Collect slides and other presentation materials from various R conferences/meetups.
 post_max: 396+24
 
-collections:
-  conferences:
-    output: true
-
 defaults:
   -
-    scope:
-      path: ""
-      type: "conferences"
     values:
       layout: "conf"
 # Assets

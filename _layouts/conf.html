@@ -1,60 +1,87 @@
 ---
 layout: default
 ---
+<style>
+@media (min-width: 650px){
+    .masthead{
+        position: fixed;
+        background-color: white;
+        opacity: 0.9;
+        width: 100%;
+        z-index: 10;
+        -webkit-box-shadow: 0px 0px 8px 8px white;
+        box-shadow: 0px 0px 8px 8px white;
 
-<h2>{{ page.name }} {{ page.year }}</h2>
+        padding-bottom: 0.4rem;
+    }
+    .main-article{
+        padding-top: 90px;
+    }
+}
+</style>
+
+
+<article id='posts-content' class="post main-article">
+
+<h2 class="post-title">{{ page.name }} {{ page.year }}</h2>
 <p><small>{{ page.date | date_to_long_string }}</small></p>
 <p><small>{{ page.location }}</small></p>
 
-<form id="sid-search">
-  <input id="sid" name="query" placeholder="filter: tidy|data" class="input-box">
+<form class="filter-box">
+<input name="query" placeholder="Type to filter" class="input-box title-filter">
 </form>
-<script>
-var sid = document.getElementById("sid-search");
-sid.addEventListener('submit', function(e){
-  e.preventDefault();
-});
 
-sid.addEventListener('keydown', function(e){
-  var main_doc = document.getElementById('main-content');
-  var regexp = new RegExp(document.getElementById("sid").value, 'i');
-  var li_list = document.querySelectorAll('#main-content li');
-  for(var i = 0; i < li_list.length; i++){
-    var temp_li = li_list[i];
-    var temp_text = temp_li.innerText;
-    if (regexp.test(temp_text)){
-      temp_li.classList.remove("li-hide");
-    }else{
-      temp_li.classList.add("li-hide");
-    }
-  }
-})
-
-document.getElementById("sid").addEventListener('change', function(e){
-  _paq.push(['trackEvent', 'filter-total-li', document.getElementById("sid").value]);
-});
-
-</script>
 <div id="main-content" class="li-content">
+
 <h3>Talks</h3>
-<ul>
   {% for talks in page.talks %}
-  <li style="padding-bottom: 10px"><a href="{{ talks.url }}" target="_blank"> {{ talks.title }}</a>, {{ talks.speaker }}
+<ul>
+  <li style="padding-bottom: 10px"><a href="{{ talks.url }}" target="_blank"> {{ talks.title }}</a>    {% if talks.video_link != null %}<a href=" {{ talks.video_link }} ">&nbsp;&nbsp;📹 </a>{% endif %} <br/> {{ talks.speaker }}
    {% if talks.topics != null %}
-   <text style="color: #999;">&nbsp;(&nbsp;{{ talks.topics }}&nbsp;)&nbsp;</text>
+   <text style="color: #999;">&nbsp; {{ talks.topics }}&nbsp; </text>
    {% endif %}
    </li>
-  {% endfor %}
+  {% if talks.image != null %}
+  {% endif %}
+  {% if talks.iframe != null %}
+  {% endif %}
+  {% if talks.video != null %}
+  {% endif %}
+
 </ul>
+  {% endfor %}
 
 <h3>Packages and Resources</h3>
-<ul>
   {% for pkgs in page.packages %}
+<ul>
   <li style="padding-bottom: 10px"><a href="{{ pkgs.url }}" target="_blank"> {{ pkgs.title }}</a>, {{ pkgs.speaker }} 
   {% if pkgs.topics != null %}
   <text style="color: #999;">&nbsp;(&nbsp;{{ pkgs.topics }}&nbsp;)&nbsp;</text>
   {% endif %}
   </li>
-  {% endfor %}
+  {% if pkgs.image != null %}
+  {% endif %}
+  {% if pkgs.iframe != null %}
+  {% endif %}
+  {% if pkgs.video != null %}
+  {% endif %}
 </ul>
+  {% endfor %}
 </div> 
+
+  <div class="pagination" style="display: none">
+  {% if page.previous.url %}
+  
+  <a id="next-page" class="pagination-item older" href="{{ page.previous.url }}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if page.next.url %}
+    <a class="pagination-item newer" href="{{  page.next.url  }}">Newer</a>
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+  </div>
+</article>
+
+<script async src="/public/jscroll.min.js" charset="utf-8"></script>

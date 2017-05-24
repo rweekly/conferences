@@ -23,17 +23,18 @@ layout: default
 
 <article id='posts-content' class="post main-article">
 
-<h2 class="post-title">{{ page.name }} {{ page.year }}</h2>
+<h2 class="post-title">{{ page.name }} {{ page.year }} </h2>
 <p><small>{{ page.date | date_to_long_string }}</small></p>
 <p><small>{{ page.location }}</small></p>
 
 <form class="filter-box">
-<input name="query" placeholder="Type to filter" class="input-box title-filter">
+<input name="query" placeholder="Type to filter" class="input-box title-filter"> 
 </form>
+
 
 <div id="main-content" class="li-content">
 
-<h3>Talks</h3>
+<h3>Talks {% if page.edit_link != null %}<a target="_blank" class="externalLink" href="{{ page.edit_link }}"> 📝 </a>{% endif %}</h3>
   {% for talks in page.talks %}
 <ul>
   <li style="padding-bottom: 10px"><a href="{{ talks.url }}" target="_blank"> {{ talks.title }}</a>    {% if talks.video_link != null %}<a href=" {{ talks.video_link }} ">&nbsp;&nbsp;📹 </a>{% endif %} <br/> {{ talks.speaker }}
@@ -51,7 +52,7 @@ layout: default
 </ul>
   {% endfor %}
 
-<h3>Packages and Resources</h3>
+<h3>Packages and Resources  {% if page.edit_link != null %}<a target="_blank" class="externalLink" href="{{ page.edit_link }}"> 📝 </a>{% endif %}</h3>
   {% for pkgs in page.packages %}
 <ul>
   <li style="padding-bottom: 10px"><a href="{{ pkgs.url }}" target="_blank"> {{ pkgs.title }}</a>, {{ pkgs.speaker }} 

@@ -42,14 +42,18 @@ layout: default
    <text style="color: #878787;">&nbsp; {{ talks.topics }}&nbsp; </text>
    {% endif %}
    </li>
+</ul>
   {% if talks.image != null %}
+  <p><img src="{{ talks.image }}" alt="{{ talks.title }}"><img></p>
   {% endif %}
   {% if talks.iframe != null %}
+  <iframe width="560" height="315" src="{{ talks.iframe }}" frameborder="0" allowfullscreen></iframe>
   {% endif %}
   {% if talks.video != null %}
+  <video width="560" height="315" src="{{ talks.video }}" frameborder="0" allowfullscreen></iframe>
   {% endif %}
 
-</ul>
+
   {% endfor %}
 
 <h3>Packages and Resources  {% if page.edit_link != null %}<a target="_blank" class="externalLink" href="{{ page.edit_link }}"> 📝 </a>{% endif %}</h3>

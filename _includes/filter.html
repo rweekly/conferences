@@ -12,21 +12,24 @@ function run_filter(e){
             temp_li.classList.remove("li-hide");
             if (temp_li.parentElement.lastElementChild === temp_li) {
                 if (temp_li.parentElement.nextElementSibling !==null){
-                    var next_img = temp_li.parentElement.nextElementSibling.querySelector('img');
+                    if(temp_li.parentElement.nextElementSibling.tagName != "UL"){
+                        var next_img = temp_li.parentElement.nextElementSibling.querySelector('img');
 
-                    if (next_img || ( temp_li.parentElement.nextElementSibling !==null && (temp_li.parentElement.nextElementSibling.tagName === "VIDEO" || temp_li.parentElement.nextElementSibling.tagName === "IFRAME" ) ) ){
-                        temp_li.parentElement.nextElementSibling.classList.remove("li-hide");
+                        if (next_img || ( temp_li.parentElement.nextElementSibling !==null && (temp_li.parentElement.nextElementSibling.tagName === "VIDEO" || temp_li.parentElement.nextElementSibling.tagName === "IFRAME" ) ) ){
+                            temp_li.parentElement.nextElementSibling.classList.remove("li-hide");
+                        }
                     }
                 }
             }
-        
         }else{
             temp_li.classList.add("li-hide");
             if (temp_li.parentElement.lastElementChild === temp_li) {
                 if (temp_li.parentElement.nextElementSibling !==null){
-                    var next_img = temp_li.parentElement.nextElementSibling.querySelector('img');
-                    if (next_img  || ( temp_li.parentElement.nextElementSibling !==null && (temp_li.parentElement.nextElementSibling.tagName === "VIDEO" || temp_li.parentElement.nextElementSibling.tagName === "IFRAME" ) ) ){
-                        temp_li.parentElement.nextElementSibling.classList.add("li-hide");
+                    if(temp_li.parentElement.nextElementSibling.tagName != "UL"){
+                        var next_img = temp_li.parentElement.nextElementSibling.querySelector('img');
+                        if (next_img  || ( temp_li.parentElement.nextElementSibling !==null && (temp_li.parentElement.nextElementSibling.tagName === "VIDEO" || temp_li.parentElement.nextElementSibling.tagName === "IFRAME" ) ) ){
+                            temp_li.parentElement.nextElementSibling.classList.add("li-hide");
+                        }
                     }
                 }
             }

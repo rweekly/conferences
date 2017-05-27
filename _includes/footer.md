@@ -26,6 +26,10 @@ document.getElementById('search-form').addEventListener('submit', function(e){
 
 <hr/>
 
+
+<p class="hide-support added-hostname support-rweekly" style="text-align: center;font-weight: bold;">Your <a class="non-visited externalLink" href="https://www.patreon.com/rweekly" onclick="pas(this)">support</a> will keep R Weekly team moving! 💡</p>
+
+
 Subscribe R Weekly with <a href="https://feedburner.google.com/fb/a/mailverify?uri=rweekly&amp;loc=en_US" target="_blank" onclick="_paq.push(['trackEvent', 'Mail', '1']);">Email</a>.
 
 **R Weekly** is openly developed [on GitHub](https://github.com/rweekly/rweekly.org). 

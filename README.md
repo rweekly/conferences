@@ -13,3 +13,44 @@ Please help us collect as many resources as possible by [submitting a PR](https:
 3. We will create an entry for big #rstats events ahead of time. 
 4. If you are a presenter but you don't want your slides to be shared here, please let us know or [fix it by yourself](https://github.com/rweekly/conferences/compare). 
 5. If you have any new ideas, let us know by [submitting an issue](https://github.com/rweekly/conferences/issues/new). 
+
+# YAML Header
+
+```yaml
+---
+title: conf title
+name: conf name
+edit_link: https://github.com/rweekly/conferences/edit/master/_posts/....md
+year: conf year
+location:  conf loc
+date: conf date
+talks:
+
+  - title: title
+    speaker: speaker
+    url: url
+
+  - title: title
+    speaker: speaker
+    url: url
+
+packages:
+
+  - title: title
+    speaker: speaker
+    url: url
+
+```
+
+# YAML Fields
+
+```yaml
+  - title: talks title
+    speaker: speak
+    url: https://... 
+    topics: topic (optional)
+    video_link: https://... (optional)
+    iframe: https://... (optional)
+    image: https://... (optional)
+    video: https://... (optional)
+```

@@ -62,18 +62,21 @@ layout: default
 <h3>Packages and Resources  {% if page.edit_link != null %}<a target="_blank" class="externalLink" href="{{ page.edit_link }}"> 📝 </a>{% endif %}</h3>
   {% for pkgs in page.packages %}
 <ul>
-  <li style="padding-bottom: 10px"><a href="{{ pkgs.url }}" target="_blank"> {{ pkgs.title }}</a>, {{ pkgs.speaker }} 
+  <li style="padding-bottom: 10px"><a href="{{ pkgs.url }}" target="_blank"> {{ pkgs.title }}</a>{% if pkg.video_link != null %}<nobr><a target="_blank" class="externalLink" href=" {{ pkgs.video_link }} ">&nbsp;📹&nbsp;</a></nobr>{% endif %}, {{ pkgs.speaker }} 
   {% if pkgs.topics != null %}
   <text style="color: #999;">&nbsp;(&nbsp;{{ pkgs.topics }}&nbsp;)&nbsp;</text>
   {% endif %}
   </li>
+</ul>
   {% if pkgs.image != null %}
+  <p><img src="{{ pkgs.image }}" alt="{{ pkgs.title }}"><img></p>
   {% endif %}
   {% if pkgs.iframe != null %}
+  <iframe width="560" height="315" src="{{ pkgs.iframe }}" frameborder="0" allowfullscreen></iframe>
   {% endif %}
   {% if pkgs.video != null %}
+  <video width="560" height="315" src="{{ pkgs.video }}" frameborder="0" allowfullscreen></iframe>
   {% endif %}
-</ul>
   {% endfor %}
 </div> 
 

@@ -88,12 +88,12 @@ talks:
     url: https://youtu.be/vqP2uTYOWK4
     video_link: https://youtu.be/vqP2uTYOWK4
 
-  - title: Microsoft, Open Source, R: You gotta be kidding!
+  - title: "Microsoft, Open Source, R: You gotta be kidding!"
     speaker: Niels Berglund
     url: http://capetown2017.satrdays.org/talks/satRday-2017-berglund.pdf
     video_link: https://youtu.be/tYNPhFyDFd4
 
-  - title: R and PowerBI: best frenemies
+  - title: "R and PowerBI: best frenemies"
     speaker: Michael Johnson
     url: http://capetown2017.satrdays.org/talks/satRday-2017-johnson.pdf
     video_link: https://youtu.be/HOEQifGXCR8

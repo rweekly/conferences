@@ -76,7 +76,7 @@ talks:
     url: http://budapest.satrdays.org/talks/16:00%20-%20Machine%20Learning%20session/2%20-%20Andrew%20Lowe:%20Machine%20learning%20for%20particle%20physics%20using%20R/index.html
     video_link: https://www.youtube.com/watch?v=iin7wlP_7zo&list=PLUBl0DoLa5SDsOetNga5pt4uo6YOyKVWn&index=14
 
-  - title: Time series analysis in R: using hidden Markov models for unsupervised learning
+  - title: "Time series analysis in R: using hidden Markov models for unsupervised learning"
     speaker: Ágoston Török
     url: http://budapest.satrdays.org/talks/16:00%20-%20Machine%20Learning%20session/3%20-%20%C3%81goston%20T%C3%B6r%C3%B6k:%20Time%20series%20analysis%20in%20R:%20using%20hidden%20Markov%20models%20for%20unsupervised%20learning/satRday_talk.html
     video_link: https://www.youtube.com/watch?v=3Nl8Y2y2jgk&index=15&list=PLUBl0DoLa5SDsOetNga5pt4uo6YOyKVWn

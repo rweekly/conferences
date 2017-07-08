@@ -72,8 +72,8 @@ talks:
     url: http://capetown2017.satrdays.org/talks/satRday-2017-kamerman.pdf
     video_link: https://youtu.be/ZXt-7AfnR4M
 
-  - title: Prospects for Trachoma Elimination through targeted mass treatment (Laing Lourens)
-    speaker: 
+  - title: Prospects for Trachoma Elimination through targeted mass treatment
+    speaker: Laing Lourens
     url: http://capetown2017.satrdays.org/talks/satRday-2017-lourens.pdf
     video_link: https://youtu.be/IxoAt_AunP8
 

@@ -1,4 +1,6 @@
-# 🎉 RWeekly Conferences 🎉
+# This repo was archived
+
+### RWeekly Conferences
 
 Twitter is a great place to _share_ conference slides but... it doesn't seem to be the best place to _read_ all these shared information. Needless to say a few days after the conference, all those shared links are just gone from your timeline. 
 
@@ -6,7 +8,7 @@ Here we are trying to create a repo to organize shared conference slides or gith
 
 Please help us collect as many resources as possible by [submitting a PR](https://github.com/rweekly/conferences/compare). We also encourage conference presenters to post links to their slides directly here after their presentation. 
 
-# To Contribute
+### To Contribute
 
 1. All the conference posts are stored in the `_posts` folder as `yaml` headers in those `md` files. 
 2. Besides slides, we also want to highlight interesting #rstats packages announced or demonstrated during the conferences. These information should go to the `packages` section. 
@@ -14,7 +16,7 @@ Please help us collect as many resources as possible by [submitting a PR](https:
 4. If you are a presenter but you don't want your slides to be shared here, please let us know or [fix it by yourself](https://github.com/rweekly/conferences/compare). 
 5. If you have any new ideas, let us know by [submitting an issue](https://github.com/rweekly/conferences/issues/new). 
 
-# YAML Header
+### YAML Header
 
 ```yaml
 ---
@@ -42,7 +44,7 @@ packages:
 
 ```
 
-# YAML Fields
+### YAML Fields
 
 ```yaml
   - title: talks title

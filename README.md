@@ -1,5 +1,8 @@
 # This repo was archived
 
+https://github.com/jumpingrivers/meetingsR for updated list of events
+
+
 ### RWeekly Conferences
 
 Twitter is a great place to _share_ conference slides but... it doesn't seem to be the best place to _read_ all these shared information. Needless to say a few days after the conference, all those shared links are just gone from your timeline. 
